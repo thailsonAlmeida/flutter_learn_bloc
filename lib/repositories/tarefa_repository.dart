@@ -5,10 +5,13 @@ class TarefaRepository {
 
   Future<List<TarefaModel>> getTarefas() async {
     _tarefas.addAll([
-      TarefaModel(nome: 'Compras no mercado'),
-      TarefaModel(nome: 'Fazer exercicio'),
-      TarefaModel(nome: 'Buscar filhos na escola'),
-      TarefaModel(nome: 'Jogar video game'),
+      TarefaModel(nome: 'Reforçar os fundamentos de OO'),
+      TarefaModel(nome: 'Estudar Spring Boot API'),
+      TarefaModel(nome: 'Prototipar a tela do APP final'),
+      TarefaModel(nome: 'Pesquisar Tópico 03 do seminário'),
+      TarefaModel(nome: 'Implementar +1 desing patterns no caixa'),
+      TarefaModel(nome: 'Preparar-se para apresentação final do caixa'),
+      TarefaModel(nome: 'Preparar conograma de estudo para o 2º semestre'),
     ]);
     return Future.delayed(
       const Duration(seconds: 2),
