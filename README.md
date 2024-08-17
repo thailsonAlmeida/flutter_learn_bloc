@@ -13,9 +13,9 @@ BLoC (Business Logic Component) é um padrão de arquitetura usado em Flutter qu
 
 ### Recursos
 
+- [Como usar o BLoc no Flutter](https://www.youtube.com/watch?app=desktop&v=0QgJWdbcHOY)
 - [Documentação oficial do BLoC](https://bloclibrary.dev/)
 - [Pacote flutter_bloc no pub.dev](https://pub.dev/packages/flutter_bloc)
-- [Tutorial: State Management with BLoC](https://docs.flutter.dev/cookbook/architecture/bloc)
 
 ### Exemplos de Código
 
