@@ -19,9 +19,8 @@ BLoC (Business Logic Component) é um padrão de arquitetura usado em Flutter qu
 
 ### Exemplos de Código
 
-Estou aplicando o BLoC em diversas partes da minha aplicação, como a gestão de tarefas, para aprimorar minha compreensão deste padrão. Você pode conferir o código [aqui](link-para-o-código).
+Estou aplicando o BLoC em diversas partes da minha aplicação, como a gestão de tarefas, para aprimorar minha compreensão deste padrão. Você pode conferir o código [aqui](https://github.com/thailsonAlmeida/flutter_learn_bloc/tree/main/lib).
 
 ### Reflexão Pessoal
-
-Aprender BLoC tem sido uma experiência enriquecedora, pois estou desenvolvendo habilidades para criar aplicativos Flutter escaláveis e manuteníveis. Estou animado para continuar explorando e aplicando este padrão em projetos futuros.
+Aprender BLoC tem acrescentado bastate, pois estou desenvolvendo habilidades para criar aplicativos Flutter escaláveis e manuteníveis. Estou animado para continuar explorando e aplicando este padrão em projetos futuros.
 
