@@ -1,3 +1,6 @@
+# Objetivo
+Projeto desenvolvido com intuido de aprender a implementar o gerenciamento de estado BLoc
+
 # learn_bloc
 
 A new Flutter project.
