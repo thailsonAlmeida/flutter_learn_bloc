@@ -26,50 +26,64 @@ class _TarefasPageState extends State<TarefasPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Bloc pattern')),
-      body: StreamBuilder<TarefaState>(
-          stream: _tarefaBloc.outputTarefa,
-          builder: (context, state) {
-            if (state.data is TarefasILoadingState) {
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
-            }
+      appBar: AppBar(
+        leading: const Icon(
+          Icons.crop_square,
+          color: Colors.redAccent,
+        ),
+        backgroundColor: Colors.black,
+        title: const Text(
+          'BLoC Pattern',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
+        ),
+      ),
+      body: Padding(
+        padding:
+            const EdgeInsets.only(top: 30, right: 8.0, left: 8.0, bottom: 8.0),
+        child: StreamBuilder<TarefaState>(
+            stream: _tarefaBloc.outputTarefa,
+            builder: (context, state) {
+              if (state.data is TarefasILoadingState) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
 
-            if (state.data is TarefasILoadedState) {
-              final list = state.data?.tarefas ?? [];
-              return ListView.separated(
-                separatorBuilder: (_, __) => const Divider(),
-                itemCount: list.length,
-                itemBuilder: (_, index) {
-                  return ListTile(
-                    leading: CircleAvatar(
-                      child: Center(
-                        child: Text(
-                          list[index].nome[0],
+              if (state.data is TarefasILoadedState) {
+                final list = state.data?.tarefas ?? [];
+                return ListView.separated(
+                  separatorBuilder: (_, __) => const Divider(),
+                  itemCount: list.length,
+                  itemBuilder: (_, index) {
+                    return ListTile(
+                      leading: CircleAvatar(
+                        child: Center(
+                          child: Text(
+                            list[index].nome[0],
+                          ),
                         ),
                       ),
-                    ),
-                    title: Text(list[index].nome),
-                    trailing: IconButton(
-                      onPressed: () {
-                        _tarefaBloc.inputTarefa.add(
-                          DeleteTarefa(
-                            tarefa: list[index],
-                          ),
-                        );
-                      },
-                      icon: const Icon(
-                        Icons.delete_forever_rounded,
-                        color: Colors.red,
+                      title: Text(list[index].nome),
+                      trailing: IconButton(
+                        onPressed: () {
+                          _tarefaBloc.inputTarefa.add(
+                            DeleteTarefa(
+                              tarefa: list[index],
+                            ),
+                          );
+                        },
+                        icon: const Icon(
+                          Icons.delete_forever_rounded,
+                          color: Colors.red,
+                        ),
                       ),
-                    ),
-                  );
-                },
-              );
-            }
-            return const Center(child: Text('Error'));
-          }),
+                    );
+                  },
+                );
+              }
+              return const Center(child: Text('Error'));
+            }),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           _tarefaBloc.inputTarefa.add(
